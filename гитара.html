@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<HTML lang="ru">
+	<HEAD>
+		<meta charset="utf-8">
+		<TITLE>Гитара</TITLE>
+		<link rel="stylesheet" href="гитара css.css">
+		<link rel="icon" href="istockphoto-2149609692-612x612.jpg" sizes="any">
+	</HEAD>
+	<BODY>
+		<div class="vasia">
+			<ul class="spis">
+				<li> <a href="/" style="color:gray; text-decoration:none"> Главная </a></li>
+				<li> <a href="https://ru.ruwiki.ru/wiki/%D0%93%D0%B8%D1%82%D0%B0%D1%80%D0%B0">
+				Подробнее о гитарах  </a> </li>
+				<li> Страны производители </li>
+			</ul>
+		</div>
+		<div class="sidebar">
+			<img src="images.jpg" alt="Гитара" class="img">
+		</div>
+		<div class="content">
+		<p>Гитара — струнный щипковый музыкальный инструмент с деревянным корпусом-резонатором (обычно в форме восьмерки) и грифом. Основные виды включают акустические, классические (с нейлоновыми струнами), электро- и электроакустические гитары, широко используемые в различных музыкальных жанрах. 
+		</div>
+		<div class="footer">Выполнено для получения пятёрки
+		</div>
+<h3>Оцените нашу работу:</h3>
+<div class="star-rating">
+    <input type="radio" id="star-1" name="rating" value="1">
+    <label for="star-1">★</label>
+    <input type="radio" id="star-2" name="rating" value="2">
+    <label for="star-2">★</label>
+    <input type="radio" id="star-3" name="rating" value="3">
+    <label for="star-3">★</label>
+    <input type="radio" id="star-4" name="rating" value="4">
+    <label for="star-4">★</label>
+    <input type="radio" id="star-5" name="rating" value="5">
+    <label for="star-5">★</label>
+</div>
+
+<p id="rating-value">Оценка еще не поставлена</p>
+
+<script>
+    // Находим все радиокнопки и текстовое поле для результата
+    const starInputs = document.querySelectorAll('.star-rating input');
+    const resultText = document.getElementById('rating-value');
+
+    // Добавляем обработчик события на каждую "звезду"
+    starInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            const val = input.value;
+            resultText.innerText = `Ваша оценка: ${val}`;
+            
+            // Здесь логика отправки на сервер (например, через fetch)
+            console.log("Данные для отправки:", val);
+        });
+    });
+</script>
+</script>
+	</BODY>
+</HTML>
